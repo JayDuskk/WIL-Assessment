@@ -18,13 +18,23 @@ public class InteractionSystem : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        interactableInRange = Physics.Raycast(transform.position, orientation.forward, 100f, Interactable);
+        RaycastHit hit;
+        interactableInRange = Physics.Raycast(transform.position, orientation.forward, out hit, 100f, Interactable);
 
         if (interactableInRange && Input.GetKeyDown(KeyCode.E))
         {
             Debug.Log("Interactable in Range");
 
             // Dialouge System Here
+            
+
+            if (hit.transform.gameObject.GetComponent<DialogueSystem>())
+            {
+                Debug.Log("Hit Object is Dialogue Based");
+                Debug.Log("Starting Dialogue System...");
+
+                hit.transform.gameObject.GetComponent<DialogueSystem>().Interacted();
+            }
         }
     }
 }
