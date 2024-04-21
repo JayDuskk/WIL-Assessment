@@ -20,6 +20,7 @@ public class DialogueSystem : MonoBehaviour
         for (int i = 0; i < Dialogue.dialogue_lines.Length; i++)
         {
             Debug.Log(Dialogue.dialogue_lines[i]);
+            Dialogue.getOptions(i);
         }
     }
 }
