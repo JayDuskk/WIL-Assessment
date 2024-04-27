@@ -22,6 +22,7 @@ public class PlayerController : MonoBehaviour
 
     Vector3 moveDirection;
 
+    public bool active = true;
     Rigidbody rb;
     // Start is called before the first frame update
     void Start()
@@ -32,14 +33,17 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
+        if (active)
+        {
+            grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, whatIsGround);
 
-        MyInput();
+            MyInput();
 
-        if (grounded)
-            rb.drag = groundDrag;
-        else
-            rb.drag = 0;
+            if (grounded)
+                rb.drag = groundDrag;
+            else
+                rb.drag = 0;
+        }
     }
 
     private void FixedUpdate()

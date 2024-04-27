@@ -13,10 +13,39 @@ MonoBehaviour:
   m_Name: Dialogue Base
   m_EditorClassIdentifier: 
   dialogue_lines:
-  - Testing Dialogue
+  - Hello, testing Dialogue System
+  - Not a Problem Shouldn't be too long
+  - Well aint you a bit rude
+  - Will Do
+  - Just Leave Me Alone
   dialogue_options:
-    _serializedList:
-    - Key: 0
-      Value: It Works
-    - Key: 0
-      Value: It Doesnt Work
+  - line_id: 0
+    response_option: Well, Good to know
+    guide: 1
+  - line_id: 0
+    response_option: Well Hurry It Up
+    guide: 2
+  - line_id: 1
+    response_option: Take your Time
+    guide: 3
+  - line_id: 1
+    response_option: Hurry it up, your so slow
+    guide: 4
+  - line_id: 2
+    response_option: Sorry, just stressed
+    guide: 4
+  - line_id: 2
+    response_option: What are you going to do about it.
+    guide: 4
+  - line_id: 3
+    response_option: Exit
+    guide: -1
+  - line_id: 3
+    response_option: Exit
+    guide: -1
+  - line_id: 4
+    response_option: Exit
+    guide: -1
+  - line_id: 4
+    response_option: Exit
+    guide: -1
