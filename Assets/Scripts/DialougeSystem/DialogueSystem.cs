@@ -30,7 +30,6 @@ public class DialogueSystem : MonoBehaviour
         Quaternion rotation = Quaternion.LookRotation(transform.position - Player.transform.position, Vector3.up);
         rotation.x = 0.0f;
         rotation.z = 0.0f;
-        Debug.Log(rotation);
         transform.rotation = rotation;
     }
 

@@ -46,8 +46,8 @@ public class DialogueManager : MonoBehaviour
         }
         if(nextLine == -1)
         {
-            Player.GetComponent<FirstPersonController>().MoveSpeed = 0;
-            Player.GetComponent<FirstPersonController>().RotationSpeed = 0;
+            Player.GetComponent<FirstPersonController>().MoveSpeed = 4;
+            Player.GetComponent<FirstPersonController>().RotationSpeed = 1;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             MainCanvas.SetActive(false);
@@ -63,8 +63,8 @@ public class DialogueManager : MonoBehaviour
         }
         if (nextLine == -1)
         {
-            Player.GetComponent<FirstPersonController>().MoveSpeed = 0;
-            Player.GetComponent<FirstPersonController>().RotationSpeed = 0;
+            Player.GetComponent<FirstPersonController>().MoveSpeed = 4;
+            Player.GetComponent<FirstPersonController>().RotationSpeed = 1;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             MainCanvas.SetActive(false);
