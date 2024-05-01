@@ -6,29 +6,29 @@ public class InteractionSystem : MonoBehaviour
 {
 
     public LayerMask Interactable;
-    public Transform orientation;
+    public Camera rayCamera;
+    public float range = 10f;
+
 
     bool interactableInRange;
     // Start is called before the first frame update
     void Start()
     {
-        
+        Debug.Log("Interaction System Started");
     }
 
     // Update is called once per frame
     void Update()
     {
         RaycastHit hit;
-        interactableInRange = Physics.Raycast(transform.position, orientation.forward, out hit, 100f, Interactable);
+        Ray ray = rayCamera.ScreenPointToRay(Input.mousePosition);
+       
 
-        if (interactableInRange && Input.GetKeyDown(KeyCode.E))
+        if(Physics.Raycast(ray, out hit, range,Interactable))
         {
-            Debug.Log("Interactable in Range");
+            Debug.DrawLine(transform.position, hit.point);
 
-            // Dialouge System Here
-            
-
-            if (hit.transform.gameObject.GetComponent<DialogueSystem>())
+            if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Hit Object is Dialogue Based");
                 Debug.Log("Starting Dialogue System...");
