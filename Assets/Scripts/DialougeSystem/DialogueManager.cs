@@ -1,3 +1,4 @@
+using StarterAssets;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +9,6 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject Player;
-    public GameObject Camera;
 
     [Header("UI Objects")]
     public GameObject MainCanvas;
@@ -46,8 +46,8 @@ public class DialogueManager : MonoBehaviour
         }
         if(nextLine == -1)
         {
-            Player.GetComponent<PlayerController>().active = true;
-            Camera.GetComponent<PlayerCamera>().active = true;
+            Player.GetComponent<FirstPersonController>().MoveSpeed = 0;
+            Player.GetComponent<FirstPersonController>().RotationSpeed = 0;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             MainCanvas.SetActive(false);
@@ -63,8 +63,8 @@ public class DialogueManager : MonoBehaviour
         }
         if (nextLine == -1)
         {
-            Player.GetComponent<PlayerController>().active = true;
-            Camera.GetComponent<PlayerCamera>().active = true;
+            Player.GetComponent<FirstPersonController>().MoveSpeed = 0;
+            Player.GetComponent<FirstPersonController>().RotationSpeed = 0;
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             MainCanvas.SetActive(false);
