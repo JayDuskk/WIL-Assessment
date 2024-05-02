@@ -8,6 +8,7 @@ public class InteractionSystem : MonoBehaviour
     public LayerMask Interactable;
     public Camera rayCamera;
     public float range = 10f;
+    public bool debug = false;
 
 
     bool interactableInRange;
@@ -26,8 +27,10 @@ public class InteractionSystem : MonoBehaviour
 
         if(Physics.Raycast(ray, out hit, range,Interactable))
         {
-            Debug.DrawLine(transform.position, hit.point);
-
+            if (debug)
+            {
+                Debug.DrawLine(transform.position, hit.point, Color.black);
+            }
             if (Input.GetKeyDown(KeyCode.E))
             {
                 Debug.Log("Hit Object is Dialogue Based");
