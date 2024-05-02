@@ -26292,7 +26292,7 @@ MeshCollider:
   serializedVersion: 5
   m_Convex: 0
   m_CookingOptions: 30
-  m_Mesh: {fileID: 160107181}
+  m_Mesh: {fileID: 1899145977}
 --- !u!33 &1222291589
 MeshFilter:
   m_ObjectHideFlags: 10
@@ -29369,7 +29369,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa13059b18f83b045aba25daedb4adcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue: {fileID: 11400000, guid: 4d4db3ab8a06c2644b74f89b6a1e6ae3, type: 2}
+  Dialogue: {fileID: 11400000, guid: 2ac3853150a065f48846e5bbac7f3a50, type: 2}
   DialogueManager: {fileID: 1538046405}
   Player: {fileID: 398587056}
 --- !u!212 &1385786888
