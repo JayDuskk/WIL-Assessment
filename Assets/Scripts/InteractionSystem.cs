@@ -11,11 +11,16 @@ public class InteractionSystem : MonoBehaviour
     public bool debug = false;
 
 
-    bool interactableInRange;
+    bool active = false;
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log("Interaction System Started");
+    }
+
+    public void reEnable()
+    {
+        active = false;
     }
 
     // Update is called once per frame
@@ -31,12 +36,13 @@ public class InteractionSystem : MonoBehaviour
             {
                 Debug.DrawLine(transform.position, hit.point, Color.black);
             }
-            if (Input.GetKeyDown(KeyCode.E))
+            if (Input.GetKeyDown(KeyCode.E) && active == false)
             {
                 Debug.Log("Hit Object is Dialogue Based");
                 Debug.Log("Starting Dialogue System...");
 
                 hit.transform.gameObject.GetComponent<DialogueSystem>().Interacted();
+                active = true;
             }
         }
     }

@@ -81,6 +81,7 @@ public class DialogueManager : MonoBehaviour
         {
             Player.GetComponent<FirstPersonController>().MoveSpeed = 4;
             Player.GetComponent<FirstPersonController>().RotationSpeed = 1;
+            Player.GetComponent<InteractionSystem>().reEnable();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             MainCanvas.SetActive(false);
@@ -98,6 +99,7 @@ public class DialogueManager : MonoBehaviour
         {
             Player.GetComponent<FirstPersonController>().MoveSpeed = 4;
             Player.GetComponent<FirstPersonController>().RotationSpeed = 1;
+            Player.GetComponent<InteractionSystem>().reEnable();
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             MainCanvas.SetActive(false);
