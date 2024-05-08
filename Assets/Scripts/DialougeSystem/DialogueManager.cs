@@ -10,6 +10,8 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public GameObject Player;
+    public float delay = 0.25f;
+
 
     [Header("UI Objects")]
     public GameObject MainCanvas;
@@ -22,7 +24,7 @@ public class DialogueManager : MonoBehaviour
     Dictionary<DialogueLine, DialogueOptions[]> dialogues = new Dictionary<DialogueLine, DialogueOptions[]>();
     DialogueOptions[] options;
     AnimationFrames[] animFrames;
-    public float delay = 0.25f;
+    GameObject interactedObject;
 
     public void SetDictionary(Dictionary<DialogueLine, DialogueOptions[]> dictionary)
     {
@@ -52,10 +54,11 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void setDialogue(DialogueLine dialogue, DialogueOptions[] dialogueOptions, AnimationFrames[] animationFrames)
+    public void setDialogue(DialogueLine dialogue, DialogueOptions[] dialogueOptions, AnimationFrames[] animationFrames, GameObject gameObject)
     {
         animFrames = animationFrames;
         MainCanvas.SetActive(true);
+        interactedObject = gameObject;
         options = dialogueOptions;
         DialogueText.text = dialogue.dialogueLine;
         StartCoroutine(animate(dialogue.spriteID,animFrames));
@@ -91,7 +94,7 @@ public class DialogueManager : MonoBehaviour
                 DialogueOptions[] newDialogueOptions = new DialogueOptions[] { dl1, dl2 };
                 dialogues[dialogue] = newDialogueOptions;
 
-                setDialogue(dialogue, newDialogueOptions, animationFrames);
+                setDialogue(dialogue, newDialogueOptions, animationFrames, gameObject);
             }
         }
     }
@@ -103,7 +106,7 @@ public class DialogueManager : MonoBehaviour
         if (nextLine > 0) 
         {
 
-            setDialogue(dialogues.ElementAt(nextLine).Key, dialogues.ElementAt(nextLine).Value, animFrames);
+            setDialogue(dialogues.ElementAt(nextLine).Key, dialogues.ElementAt(nextLine).Value, animFrames, interactedObject);
         }
         if(nextLine == -1)
         {
@@ -113,6 +116,7 @@ public class DialogueManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             MainCanvas.SetActive(false);
+            Destroy(interactedObject);
         }
     }
 
@@ -121,7 +125,7 @@ public class DialogueManager : MonoBehaviour
         int nextLine = options[1].guide;
         if(nextLine > 0)
         {
-            setDialogue(dialogues.ElementAt(nextLine).Key, dialogues.ElementAt(nextLine).Value, animFrames);
+            setDialogue(dialogues.ElementAt(nextLine).Key, dialogues.ElementAt(nextLine).Value, animFrames, interactedObject);
         }
         if (nextLine == -1)
         {
@@ -131,6 +135,7 @@ public class DialogueManager : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
             MainCanvas.SetActive(false);
+            Destroy(interactedObject);
         }
     }
 }

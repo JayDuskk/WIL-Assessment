@@ -69,7 +69,7 @@ public class DialogueSystem : MonoBehaviour
         int index = 0;
 
         manager.SetDictionary(dialogues);
-        manager.setDialogue(dialogues.ElementAt(index).Key, dialogues.ElementAt(index).Value, Dialogue.getSprites());
+        manager.setDialogue(dialogues.ElementAt(index).Key, dialogues.ElementAt(index).Value, Dialogue.getSprites(), gameObject);
       
 
         

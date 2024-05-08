@@ -21198,7 +21198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa13059b18f83b045aba25daedb4adcc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Dialogue: {fileID: 11400000, guid: 2ac3853150a065f48846e5bbac7f3a50, type: 2}
+  Dialogue: {fileID: 11400000, guid: 2d63a988bad6af8468a933020bb5afc2, type: 2}
   DialogueManager: {fileID: 1538046405}
   Player: {fileID: 398587056}
 --- !u!212 &1385786888
