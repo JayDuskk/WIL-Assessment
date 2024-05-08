@@ -16,21 +16,38 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI DialogueText;
     public TextMeshProUGUI Option1Text;
     public TextMeshProUGUI Option2Text;
+    public UnityEngine.UI.Image spriteImage;
     
 
     Dictionary<string, DialogueOptions[]> dialogues = new Dictionary<string, DialogueOptions[]>();
     DialogueOptions[] options;
+    Sprite[] animFrames;
+    public float delay = 0.25f;
 
     public void SetDictionary(Dictionary<string, DialogueOptions[]> dictionary)
     {
         dialogues = dictionary;
     }
 
-    public void setDialogue(string dialogue, DialogueOptions[] dialogueOptions)
+    IEnumerator animate(Sprite[] frames)
     {
+        spriteImage.sprite = frames[0];
+        yield return new WaitForSeconds(delay);
+        spriteImage.sprite = frames[1];
+        yield return new WaitForSeconds(delay);
+        spriteImage.sprite = frames[2];
+        yield return new WaitForSeconds(delay);
+        spriteImage.sprite = frames[0];
+        yield return null;
+    }
+
+    public void setDialogue(string dialogue, DialogueOptions[] dialogueOptions, Sprite[] animationFrames)
+    {
+        animFrames = animationFrames;
         MainCanvas.SetActive(true);
         options = dialogueOptions;
         DialogueText.text = dialogue;
+        StartCoroutine(animate(animFrames));
         if (dialogueOptions.Length > 0)
         {
             Option1Text.text = dialogueOptions[0].response_option;
@@ -63,7 +80,7 @@ public class DialogueManager : MonoBehaviour
                 DialogueOptions[] newDialogueOptions = new DialogueOptions[] { dl1, dl2 };
                 dialogues[dialogue] = newDialogueOptions;
 
-                setDialogue(dialogue, newDialogueOptions);
+                setDialogue(dialogue, newDialogueOptions, animationFrames);
             }
         }
     }
@@ -75,7 +92,7 @@ public class DialogueManager : MonoBehaviour
         if (nextLine > 0) 
         {
 
-            setDialogue(dialogues.ElementAt(nextLine).Key, dialogues.ElementAt(nextLine).Value);
+            setDialogue(dialogues.ElementAt(nextLine).Key, dialogues.ElementAt(nextLine).Value, animFrames);
         }
         if(nextLine == -1)
         {
@@ -93,7 +110,7 @@ public class DialogueManager : MonoBehaviour
         int nextLine = options[1].guide;
         if(nextLine > 0)
         {
-            setDialogue(dialogues.ElementAt(nextLine).Key, dialogues.ElementAt(nextLine).Value);
+            setDialogue(dialogues.ElementAt(nextLine).Key, dialogues.ElementAt(nextLine).Value, animFrames);
         }
         if (nextLine == -1)
         {

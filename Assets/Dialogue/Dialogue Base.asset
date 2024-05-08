@@ -89,3 +89,7 @@ MonoBehaviour:
     response_option: "International Student: That seems a bit silly - it\u2019s just
       a name, right?"
     guide: 28
+  SpriteAnimationFrames:
+  - {fileID: 21300000, guid: cef7dc3a8133a0e49babf1200121ad65, type: 3}
+  - {fileID: 21300000, guid: 8b369e0e29aa7c744adfbf633e0d78fd, type: 3}
+  - {fileID: 21300000, guid: 4ff56c1e90e437f43a740211e429db70, type: 3}

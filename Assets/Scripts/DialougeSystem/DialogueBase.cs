@@ -26,6 +26,9 @@ public class DialogueBase : ScriptableObject
 
     [SerializeField]
     DialogueOptions[] dialogue_options;
+
+    [SerializeField]
+    Sprite[] SpriteAnimationFrames;
     
     public DialogueOptions[] getOptions()
     {
@@ -36,4 +39,10 @@ public class DialogueBase : ScriptableObject
     {
         return dialogue_lines;
     }
+
+    public Sprite[] getSprites()
+    {
+        return SpriteAnimationFrames;
+    }
+
 }
