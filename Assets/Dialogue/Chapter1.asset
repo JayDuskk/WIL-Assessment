@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df91e11090fa4bc4b8c49912baed8ce4, type: 3}
+  m_Name: Chapter1
+  m_EditorClassIdentifier: 
+  dialogue_lines:
+  - "Ada: Um, excuse me? Do you know where the class for Design Principles is? I\u2019m
+    new here and I don\u2019t know where the classes are\u2026"
+  - "Jack: Oh yeah! I\u2019m in that class as well! It\u2019s on the second level,
+    the large class labelled at the end of the hallway F2.10. My name\u2019s Jack,
+    what\u2019s yours?"
+  - 'Ada: Ada!'
+  - "Jack: I\u2019m so thankful I\u2019ve at least met somebody sharing the same
+    class as me, it certainly helps to know somebody!"
+  - "Ada: Yeah, it does! I\u2019m new to the country, so I haven\u2019t been able
+    to meet a lot of people."
+  - 'Jack: Oh nice! Where are you originally from?'
+  - 'Ada: Germany, I moved here about a few months ago. How about you? Where are
+    you from?'
+  - "Jack: I\u2019m actually a First Nations person! I\u2019m from Wiradjuri country."
+  - "Ada: Oh, interesting\u2026I have never heard of a \u201CFirst Nations person\u201D
+    before, and I don\u2019t think I\u2019ve ever heard of that country before. "
+  - "Jack: Um, well I\u2019m native to Australia! I\u2019m an Aboriginal person,
+    but I prefer to call myself a First Nations person. I don\u2019t come from a
+    different country - Wiradjuri country is a certain region in Australia where
+    my people come from!"
+  - There are tons of separate mobs in Australia where different clans have different
+    dialects and slightly different cultural practices.
+  - 'Jack: Hehe, thank you!'
+  - "Um\u2026Well\u2026There\u2019s no real way to look Australian, Australia\u2019s
+    made up of a plethora of different cultures. There isn\u2019t a standard cut-and-dry
+    image of an average Aussie."
+  dialogue_options:
+  - line_id: 10
+    response_option: Oh that's cool! I didn't know that at all, that's pretty interesting!
+    guide: 11
+  - line_id: 10
+    response_option: "But you don\u2019t\u2026 look Australian\u2026"
+    guide: 12
+  SpriteAnimationFrames:
+  - {fileID: 21300000, guid: cef7dc3a8133a0e49babf1200121ad65, type: 3}
+  - {fileID: 21300000, guid: 8b369e0e29aa7c744adfbf633e0d78fd, type: 3}
+  - {fileID: 21300000, guid: 4ff56c1e90e437f43a740211e429db70, type: 3}
