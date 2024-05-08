@@ -39,8 +39,8 @@ MonoBehaviour:
       passed away recently, and I\u2019m in the process of \u201Csorry business\u201D,
       we try to avoid the names of people who\u2019ve died recently. "
     spriteID: 0
-  - dialogueLine: 'Dave: It''s Ok, I Just didnt expect to see a poster about the
-      artist today. Thanks for checking up on my, that was kind of you to do.'
+  - dialogueLine: 'Dave: It''s Ok, I just didn''t expect to see a poster about the
+      artist today. Thanks for checking up on me, that was kind of you to do.'
     spriteID: 0
   - dialogueLine: "Dave: It\u2019s not \u201Cjust a name\u201D...names hold significant
       purpose in our culture. It may seem silly to you, but it\u2019s rather significant
