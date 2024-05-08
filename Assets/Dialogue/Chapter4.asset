@@ -1,0 +1,108 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: df91e11090fa4bc4b8c49912baed8ce4, type: 3}
+  m_Name: Chapter4
+  m_EditorClassIdentifier: 
+  dialogue_lines:
+  - dialogueLine: "Chloe: Hi, I\u2019m looking for a uhhh... Rochelle?"
+    spriteID: 0
+  - dialogueLine: 'Rochelle: That is me, what can I do for you today?'
+    spriteID: 1
+  - dialogueLine: 'Chloe: My name is Chloe and I was wondering if I could talk to
+      you about the Reconciliation Action Plan that Torrens University has in place.'
+    spriteID: 0
+  - dialogueLine: 'Rochelle: Of course we can Chloe, was there anything specific
+      you wanted to go over?'
+    spriteID: 1
+  - dialogueLine: 'Rochelle: The Reconciliation Action Plan, RAP for short is a document
+      that outlines the steps that Torrens is going to be taking to include and reconcile
+      with the First Nation communities their campuses are based in and around.'
+    spriteID: 1
+  - dialogueLine: 'Rochelle: Sure, What do you want to know specifically?'
+    spriteID: 1
+  - dialogueLine: 'Rochelle: I am the First Nations liaison office and a member of
+      the Gumbaynggirr Nation. I work alongside the students and staff to further
+      increase their knowledge and understanding of the path to reconciliation.'
+    spriteID: 1
+  - dialogueLine: 'Rochelle: It is critical to not only uphold all five dimensions
+      of reconciliation, but also increase awareness of Aboriginal and Torres Strait
+      Islander cultures, histories, knowledge, and leadership across all sectors
+      of Australian society.'
+    spriteID: 1
+  - dialogueLine: "Rochelle: In saying that we follow our RAP\u2019s four pillars
+      Relationships, Respect, Opportunities, and Governance. These four pillars make
+      up the foundation of Torrens Plan to reconcile with the First Nations People."
+    spriteID: 1
+  - dialogueLine: "Chloe: That\u2019s a lot of information. So in short the RAP is
+      the universities plan to include and help First Nations students and communities
+      around the campuses."
+    spriteID: 0
+  - dialogueLine: 'Rochelle: Yes, That is the basics of the RAP but there is more
+      to it than that. I suggest giving it a read, you can find it on our website
+      or by searching Torrens University Reconciliation Action Plan on Google.'
+    spriteID: 1
+  - dialogueLine: "Rochelle: Not a problem Chloe, if you have any more questions
+      don\u2019t be afraid to ask."
+    spriteID: 1
+  - dialogueLine: 'Rochelle: It may seem like it but it was a lot of work to put
+      together the plan and it holds a lot of valuable information, I suggest reading
+      it when you get the time.'
+    spriteID: 1
+  - dialogueLine: 'Chloe: Hmmm, I will do that. Thank you for opening my eyes'
+    spriteID: 0
+  dialogue_options:
+  - line_id: 3
+    response_option: What is this Reconcilitation Action Plan? I've never heard of
+      it.
+    guide: 4
+  - line_id: 3
+    response_option: Something more Specific...
+    guide: 5
+  - line_id: 4
+    response_option: Continue
+    guide: 5
+  - line_id: 4
+    response_option: Continue
+    guide: 5
+  - line_id: 5
+    response_option: What is your role in all of this?
+    guide: 6
+  - line_id: 5
+    response_option: Why is this RAP important?
+    guide: 7
+  - line_id: 6
+    response_option: Why is this RAP important?
+    guide: 7
+  - line_id: 6
+    response_option: Continue
+    guide: 9
+  - line_id: 10
+    response_option: Thank you, Rochelle
+    guide: 11
+  - line_id: 10
+    response_option: That sounds like a lot of work.
+    guide: 12
+  - line_id: 11
+    response_option: Exit
+    guide: -1
+  - line_id: 11
+    response_option: Exit
+    guide: -1
+  SpriteAnimationFrames:
+  - frames:
+    - {fileID: 21300000, guid: c51e98d8fbb73d440ad0471affe132fd, type: 3}
+    - {fileID: 21300000, guid: 5458b85796f43c340ac7133cdb028b9f, type: 3}
+    - {fileID: 21300000, guid: 5469748636db6fc48a6c3ab70d8390a1, type: 3}
+  - frames:
+    - {fileID: 21300000, guid: 752aaef1db6afa441829e58ac16f61ff, type: 3}
+    - {fileID: 21300000, guid: bc7fc74251ec7664c886d0d97e1c4d9b, type: 3}
+    - {fileID: 21300000, guid: e5a916c4a538c6d4c956490c3cf92322, type: 3}

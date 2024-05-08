@@ -39,7 +39,7 @@ public class DialogueManager : MonoBehaviour
             spriteImage.gameObject.SetActive(true);
             
             spriteImage.sprite = frames[spriteID].frames[0];
-            spriteImage.SetNativeSize();
+
             yield return new WaitForSeconds(delay);
             spriteImage.sprite = frames[spriteID].frames[1];
             yield return new WaitForSeconds(delay);
