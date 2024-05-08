@@ -13,9 +13,37 @@ MonoBehaviour:
   m_Name: Chapter2
   m_EditorClassIdentifier: 
   dialogue_lines:
-  - '[As Jack, Ada and Harper stroll around the campus hallways, Jack spots a poster
-    that displays the image and name of a recently deceased First Nations Artist.]'
-  - 'Jack: I...Uh...'
-  - 'Jack: I...Uh...'
+  - dialogueLine: "Jack, Ada, and Harper (a fellow design classmate they met in last
+      week\u2019s class) meet up before class for a chat. As they stroll around the
+      campus hallways, Jack spots a poster that displays the image and name of a
+      recently deceased First Nations Artist."
+    spriteID: -1
+  - dialogueLine: "Jack: I\u2026uh\u2026"
+    spriteID: 0
+  - dialogueLine: 'Harper: You alright, dude?'
+    spriteID: 2
+  - dialogueLine: "Jack: Yeah\u2026 I\u2019m gonna be right back."
+    spriteID: 0
+  - dialogueLine: 'Ada: I wonder what that was about?'
+    spriteID: 1
+  - dialogueLine: "Harper: I got nothin\u2019, maybe he\u2019s not feeling well."
+    spriteID: 2
+  - dialogueLine: 'Ada: Should we go check up on him?'
+    spriteID: 1
+  - dialogueLine: "Harper: I\u2019ll probably give him some space - feel free to
+      check on him if you\u2019d like"
+    spriteID: 2
   dialogue_options: []
-  SpriteAnimationFrames: []
+  SpriteAnimationFrames:
+  - frames:
+    - {fileID: 21300000, guid: cef7dc3a8133a0e49babf1200121ad65, type: 3}
+    - {fileID: 21300000, guid: 8b369e0e29aa7c744adfbf633e0d78fd, type: 3}
+    - {fileID: 21300000, guid: 4ff56c1e90e437f43a740211e429db70, type: 3}
+  - frames:
+    - {fileID: 21300000, guid: 0057e4102c981774abd3dfa6424c7381, type: 3}
+    - {fileID: 21300000, guid: 9b622824021c0f449a7a44dca7d0f7d6, type: 3}
+    - {fileID: 21300000, guid: 49b752eff93296640a82f33381fe3804, type: 3}
+  - frames:
+    - {fileID: 21300000, guid: 442d565fca0eb2e408ae808fd23a6dbd, type: 3}
+    - {fileID: 21300000, guid: 8ff65fb209fa78448b1fb06653169f1a, type: 3}
+    - {fileID: 21300000, guid: 1be63da3effcb6e4f8c30ecac3ed8e20, type: 3}

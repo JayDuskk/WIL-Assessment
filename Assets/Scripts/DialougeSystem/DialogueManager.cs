@@ -31,14 +31,25 @@ public class DialogueManager : MonoBehaviour
 
     IEnumerator animate(int spriteID, AnimationFrames[] frames)
     {
-        spriteImage.sprite = frames[spriteID].frames[0];
-        yield return new WaitForSeconds(delay);
-        spriteImage.sprite = frames[spriteID].frames[1];
-        yield return new WaitForSeconds(delay);
-        spriteImage.sprite = frames[spriteID].frames[2]; ;
-        yield return new WaitForSeconds(delay);
-        spriteImage.sprite = frames[spriteID].frames[0];
-        yield return null;
+
+        if (spriteID >= 0)
+        {
+            spriteImage.gameObject.SetActive(true);
+            
+            spriteImage.sprite = frames[spriteID].frames[0];
+            spriteImage.SetNativeSize();
+            yield return new WaitForSeconds(delay);
+            spriteImage.sprite = frames[spriteID].frames[1];
+            yield return new WaitForSeconds(delay);
+            spriteImage.sprite = frames[spriteID].frames[2]; ;
+            yield return new WaitForSeconds(delay);
+            spriteImage.sprite = frames[spriteID].frames[0];
+            yield return null;
+        }
+        else
+        {
+            spriteImage.gameObject.SetActive(false);
+        }
     }
 
     public void setDialogue(DialogueLine dialogue, DialogueOptions[] dialogueOptions, AnimationFrames[] animationFrames)
