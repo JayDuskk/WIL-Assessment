@@ -19,35 +19,35 @@ public class DialogueManager : MonoBehaviour
     public UnityEngine.UI.Image spriteImage;
     
 
-    Dictionary<string, DialogueOptions[]> dialogues = new Dictionary<string, DialogueOptions[]>();
+    Dictionary<DialogueLine, DialogueOptions[]> dialogues = new Dictionary<DialogueLine, DialogueOptions[]>();
     DialogueOptions[] options;
-    Sprite[] animFrames;
+    AnimationFrames[] animFrames;
     public float delay = 0.25f;
 
-    public void SetDictionary(Dictionary<string, DialogueOptions[]> dictionary)
+    public void SetDictionary(Dictionary<DialogueLine, DialogueOptions[]> dictionary)
     {
         dialogues = dictionary;
     }
 
-    IEnumerator animate(Sprite[] frames)
+    IEnumerator animate(int spriteID, AnimationFrames[] frames)
     {
-        spriteImage.sprite = frames[0];
+        spriteImage.sprite = frames[spriteID].frames[0];
         yield return new WaitForSeconds(delay);
-        spriteImage.sprite = frames[1];
+        spriteImage.sprite = frames[spriteID].frames[1];
         yield return new WaitForSeconds(delay);
-        spriteImage.sprite = frames[2];
+        spriteImage.sprite = frames[spriteID].frames[2]; ;
         yield return new WaitForSeconds(delay);
-        spriteImage.sprite = frames[0];
+        spriteImage.sprite = frames[spriteID].frames[0];
         yield return null;
     }
 
-    public void setDialogue(string dialogue, DialogueOptions[] dialogueOptions, Sprite[] animationFrames)
+    public void setDialogue(DialogueLine dialogue, DialogueOptions[] dialogueOptions, AnimationFrames[] animationFrames)
     {
         animFrames = animationFrames;
         MainCanvas.SetActive(true);
         options = dialogueOptions;
-        DialogueText.text = dialogue;
-        StartCoroutine(animate(animFrames));
+        DialogueText.text = dialogue.dialogueLine;
+        StartCoroutine(animate(dialogue.spriteID,animFrames));
         if (dialogueOptions.Length > 0)
         {
             Option1Text.text = dialogueOptions[0].response_option;

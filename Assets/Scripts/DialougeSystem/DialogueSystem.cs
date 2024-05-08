@@ -42,10 +42,10 @@ public class DialogueSystem : MonoBehaviour
         Cursor.visible = true;
 
 
-        string[] lines = Dialogue.getLines();
+        DialogueLine[] lines = Dialogue.getLines();
         DialogueOptions[] options = Dialogue.getOptions();
         List<DialogueOptions> tOptions = new List<DialogueOptions>();
-        Dictionary<string, DialogueOptions[]> dialogues = new Dictionary<string, DialogueOptions[]>();
+        Dictionary<DialogueLine, DialogueOptions[]> dialogues = new Dictionary<DialogueLine, DialogueOptions[]>();
 
         for (int i = 0; i < lines.Length; i++)
         {

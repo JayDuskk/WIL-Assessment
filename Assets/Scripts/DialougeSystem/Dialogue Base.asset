@@ -49,3 +49,8 @@ MonoBehaviour:
   - line_id: 4
     response_option: Exit
     guide: -1
+  SpriteAnimationFrames:
+  - frames:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
